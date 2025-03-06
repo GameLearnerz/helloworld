@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Website</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px; 
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+            color: white; /* Text color */
+        }
+        h1 {
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            background: #4CAF50; /* Green button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: yellow;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Dynamic Website</h1>
+    <p id="time">Current Time: </p>
+    <button onclick="updateTime()">Update Time</button>
+    <br><br>
+    <a href="err.html">Go to Error Page</a> <!-- Link to err.html -->
+
+    <script>
+        function updateTime() {
+            const now = new Date().toLocaleTimeString();
+            document.getElementById('time').innerText = "Current Time: " + now;
+        }
+        updateTime(); // Update time on load
+    </script>
+</body>
+</html>
